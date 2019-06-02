@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "chat";
+}
+
+ <style>
+ li { list-style:none; }
+ </style>
+
+<div class="container">
+    <h2>chat</h2>
+    @*<div class="form-group">
+        Sala: <input type="text" id="host" placeholder="Sala" /><br />
+        Usuario: <input type="text" id="user" placeholder="user" /><br />
+        Mensaje: <input type="text" id="message" placeholder="message" />
+        <button id="sendButton">Enviar</button>
+    </div>*@
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+                <label>Sala:</label>
+                <input type="text" id="host" placeholder="Sala" class="form-control" />
+            </div>
+        </div>
+        <div class=" col-md-6 col-sm-6">
+            <div class="form-group">
+                <label>Usuario:</label>
+                <input type="text" id="user" placeholder="user" class="form-control" />
+            </div>
+        </div>
+        <div class=" col-md-11 col-sm-11">
+            <div class="form-group">
+                <label>Mensaje:</label>
+                <textarea id="message" placeholder="message" cols="3" class="form-control"></textarea>           @*onkeypress="enter();"*@
+            </div>
+        </div>
+        <div class=" col-md-1 col-sm-1">
+            <div class="form-group">
+                <label></label>
+                <button id="sendButton" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mailBox" style="height:200px; overflow:auto;" class="card col-md-12 col-sm-12 col-xm-12 col-lg-12">
+        <ul id="messageList" class="list-group list-group-flush"></ul>
+    </div>
+</div>
+<script src="~/lib/SignalR/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+@*<script>
+    function enter() {
+        var key = window.event.keyCode;
+        if (key == 13) {
+
+
+        }
+    }
+</script>*@
